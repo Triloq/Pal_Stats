@@ -27,7 +27,10 @@ class ExcelSheet:
         else:
             raise Exception('Invalid entry')
 
-    
+    def _get_Pal_Names(self):
+        sheet = self.load_sheet()
+        names = sheet['Name'].values
+        return names
 
 
     def sheet_names(self):
