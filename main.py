@@ -1,5 +1,5 @@
 from sheet import ExcelSheet
-
+from graphics import Window
 
 def __main__():
     # Sheet names to use for now: 'Pal Stats' , 
@@ -9,8 +9,14 @@ def __main__():
     
     pal_stats_sheet = ExcelSheet(FILE_PATH, SHEET_NAME['stats'])
     sheet = pal_stats_sheet.load_sheet()
-    
+    # print(type(pal_stats_sheet.get_pal_stats('jolthog cryst')))
 
+    win = Window()
+
+    win.create_text_box('howdy',400, 300)
+
+    win._wait_for_close()
+    
 __main__()
 
 
